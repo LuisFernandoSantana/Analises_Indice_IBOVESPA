@@ -1,4 +1,4 @@
-# Tech Challenge (Pós Tech) — Previsão Direcional do IBOVESPA (D+1)
+# Previsão Direcional do IBOVESPA (D+1)
 
 Projeto de **classificação binária** para prever se o **IBOVESPA** vai fechar em **alta (↑) ou baixa (↓)** no próximo pregão (**D+1**), usando dados históricos e engenharia de atributos com indicadores técnicos.
 
