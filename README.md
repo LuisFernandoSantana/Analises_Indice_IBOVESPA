@@ -82,3 +82,15 @@ A divisão é feita mantendo a ordem cronológica (sem embaralhar).
 - **Features de maior contribuição:** destaque para **RSI_7** e **MM20** (conforme análise de importância)
 
 > Resultado ficou **próximo da meta (75%)**, mas abaixo do requisito mínimo do enunciado.
+
+## 📂 Estrutura do Repositório
+
+```text
+├─ notebooks/
+│  └─ Tech_Challenge_IBOVESPA.ipynb
+├─ docs/
+│  ├─ apresentacao.pdf (ou .pptx)
+│  └─ imagens/ (curva ROC, matriz confusão, etc.)
+├─ README.md
+└─ requirements.txt
+
