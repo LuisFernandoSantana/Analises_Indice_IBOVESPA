@@ -17,13 +17,23 @@ Este modelo pode ser usado como **insumo para dashboards internos** e análises 
 ## 📌 Dados
 
 - **Fonte (pública):**
-  - Enunciado sugere: https://br.investing.com/indices/bovespa-historical-data  
+  - link: https://br.investing.com/indices/bovespa-historical-data  
   - Neste projeto usamos **Yahoo Finance via `yfinance`** pela praticidade de aquisição via API.
 - **Frequência:** diária
-- **Período utilizado:** ~10 anos (conforme notebook/apresentação)
+- **Período utilizado:** ~10 anos
 
 Estrutura típica (OHLCV):
 - `data`, `abertura (Open)`, `maxima (High)`, `minima (Low)`, `fechamento (Close)`, `volume (Volume)`
+
+### Análise exploratória (distribuição dos fechamentos)
+<p align="center">
+  <img src="img/grafico%201.png" alt="Distribuição dos fechamentos do IBOVESPA" width="950">
+</p>
+
+### Tendência anual do fechamento médio (últimos 10 anos)
+<p align="center">
+  <img src="img/grafico%202.png" alt="Tendência anual do fechamento médio do IBOVESPA" width="950">
+</p>
 
 ---
 
@@ -81,11 +91,28 @@ A divisão é feita mantendo a ordem cronológica (sem embaralhar).
 - **ROC AUC:** ~**0,73**
 - **Features de maior contribuição:** destaque para **RSI_7** e **MM20** (conforme análise de importância)
 
-> Resultado ficou **próximo da meta (75%)**, mas abaixo do requisito mínimo do enunciado.
+> Resultado ficou **próximo da meta (75%)**, mas abaixo do requisito mínimo.
+
+### Matriz de Confusão (XGBoost)
+<p align="center">
+  <img src="img/grafico%203.png" alt="Matriz de Confusão - XGBoost" width="520">
+</p>
+
+### Importância das Features (XGBoost)
+<p align="center">
+  <img src="img/grafico%204.png" alt="Importância das Features - XGBoost" width="950">
+</p>
+
+---
 
 ## 📂 Estrutura do Repositório
 
 ```text
+├─ img/
+│  ├─ grafico 1.png
+│  ├─ grafico 2.png
+│  ├─ grafico 3.png
+│  └─ grafico 4.png
 ├─ notebooks/
 │  └─ Tech_Challenge_IBOVESPA.ipynb
 ├─ docs/
@@ -93,4 +120,3 @@ A divisão é feita mantendo a ordem cronológica (sem embaralhar).
 │  └─ imagens/ (curva ROC, matriz confusão, etc.)
 ├─ README.md
 └─ requirements.txt
-
